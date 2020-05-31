@@ -3,7 +3,7 @@
 	EXPORT fiboar [CODE]
 
 fiboar      PROC
-			push {r4-r9,lr} ;Variablenregister retten
+			push {r5-r7,lr} ;Variablenregister retten
 
 			mov r5, r0		;arg
 			
@@ -31,7 +31,7 @@ argNe1		sub r0, r5, #1	;arg-1
 			b end_proc
 
 end_proc
-			pop {r4-r9,lr} ;Variablenregister restaurieren
+			pop {r5-r7,lr} ;Variablenregister restaurieren
 			bx lr
 			ENDP
 			END
