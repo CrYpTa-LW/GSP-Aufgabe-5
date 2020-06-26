@@ -57,10 +57,14 @@ int main(void)
 	int ar22 = fiboar(22);
 	int ar29 = fiboar(29);
 	
+	//functionpointer array
 	int (*fp[4])(int)={fiboci,fibocr,fiboai,fiboar};
+	//test values
 	int arg[4]={0,10,22,29};
+	//solution array
 	int resu[4][4];
 	
+	//fill array
 	for(int i = 0; i < 4; i++)
 	{
 		for(int j = 0; j < 4; j++)
@@ -70,9 +74,9 @@ int main(void)
 	}
 	
   return 0;
-
 }
 
+//fibo interative
 int fiboci(int arg)
 {
 	int i = 0;
@@ -104,6 +108,7 @@ int fiboci(int arg)
 	return result;
 }
 
+//fibo recursive
 int fibocr(int arg)
 {
 	if(arg == 0)
